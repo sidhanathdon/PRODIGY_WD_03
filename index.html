@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Tic-Tac-Toe: Impossible Edition</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <!-- Particle Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Main Game Container -->
+    <div class="game-container">
+        <!-- Home Screen -->
+        <div class="game-home" id="game-home">
+            <header class="game-header">
+                <h1 class="game-title">Ultimate Tic-Tac-Toe</h1>
+                <p class="game-subtitle">Challenge our impossible AI</p>
+            </header>
+
+            <div class="game-modes">
+                <div class="mode-card active" id="ai-mode">
+                    <div class="mode-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="mode-name">Player vs AI</h3>
+                    <p class="mode-desc">Challenge our unbeatable AI</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="btn" id="start-btn">
+                    <i class="fas fa-play"></i> Start Game
+                </button>
+            </div>
+        </div>
+
+        <!-- Game Board -->
+        <div class="game-board-container" id="game-board-container">
+            <div class="board-header">
+                <div class="player-turn X" id="player-turn">X's Turn</div>
+                <div class="game-controls">
+                    <button class="btn btn-secondary btn-sm" id="restart-btn">
+                        <i class="fas fa-sync-alt"></i> Restart
+                    </button>
+                    <button class="btn btn-secondary btn-sm" id="home-btn">
+                        <i class="fas fa-home"></i> Menu
+                    </button>
+                </div>
+            </div>
+
+            <div id="game-board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message Overlay -->
+    <div class="message-overlay" id="message-overlay">
+        <div class="message-box">
+            <h2 class="message-title" id="message-title">You Win!</h2>
+            <p class="message-text" id="message-text">Congratulations on your victory!</p>
+            <div class="message-buttons">
+                <button class="btn" id="play-again-btn">
+                    <i class="fas fa-redo"></i> Play Again
+                </button>
+                <button class="btn btn-secondary" id="menu-btn">
+                    <i class="fas fa-home"></i> Main Menu
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="click-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-quick-jump-arcade-game-239.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-winning-chimes-2015.mp3" preload="auto"></audio>
+    <audio id="draw-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-retro-game-over-213.mp3" preload="auto"></audio>
+    <audio id="ai-move-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-sci-fi-positive-interface-beep-257.mp3" preload="auto"></audio>
+
+    <script src="./index.js"></script>
+</body>
+</html>
